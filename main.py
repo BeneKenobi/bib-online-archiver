@@ -28,6 +28,7 @@ def retrieve(url, filename):
     options = {
         "load-error-handling": "ignore",
         "no-stop-slow-scripts": "",
+        "no-outline": "",
         "javascript-delay": 6000,
     }
     if proxy is not None:
