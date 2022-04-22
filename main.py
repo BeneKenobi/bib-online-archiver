@@ -2,6 +2,7 @@ import argparse
 import bibtexparser
 import pdfkit
 import requests
+from urllib.parse import urlparse
 
 
 def main():
@@ -18,8 +19,8 @@ def main():
         bib_database = bibtexparser.load(bibtex_file, parser=parser)
 
         for entry in bib_database.entries:
-            if entry["ENTRYTYPE"].lower() == "online":
-                retrieve(entry["url"], f"{args.outputfolder}{entry['ID']}.pdf")
+                url = urlparse(entry["url"])._replace(fragment="").geturl()
+                retrieve(url, f"{args.outputfolder}{entry['ID']}.pdf")
 
 
 def retrieve(url, filename):
