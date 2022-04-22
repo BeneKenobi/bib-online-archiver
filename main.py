@@ -11,6 +11,13 @@ def main():
     argparser.add_argument(
         "--outputfolder", nargs="?", help="target folder for .pdf-file(s)", default="./"
     )
+    argparser.add_argument(
+        "--alltypes",
+        nargs="?",
+        default=False,
+        const=True,
+        help='use all entrytypes, not only "Online"',
+    )
     args = argparser.parse_args()
     with open(args.file) as bibtex_file:
         parser = bibtexparser.bparser.BibTexParser(
@@ -19,6 +26,9 @@ def main():
         bib_database = bibtexparser.load(bibtex_file, parser=parser)
 
         for entry in bib_database.entries:
+            if (
+                (entry["ENTRYTYPE"].lower() == "online") or (args.alltypes is True)
+            ) and ("url" in entry):
                 url = urlparse(entry["url"])._replace(fragment="").geturl()
                 retrieve(url, f"{args.outputfolder}{entry['ID']}.pdf")
 

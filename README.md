@@ -14,6 +14,9 @@ pipenv run main.py my_sources.bib
 
 Default output path is the current directory, may be changed with `--outputdir /my/directory`.
 
+
+By default only bib entries of type `Online` will be parsed. If you want to parse all types, use the argument `--alltypes`.
+
 ## Development
 
 ```shell
