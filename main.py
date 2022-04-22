@@ -29,6 +29,8 @@ def retrieve(url, filename):
         "load-error-handling": "ignore",
         "no-stop-slow-scripts": "",
         "no-outline": "",
+        "disable-external-links": "",
+        "disable-internal-links": "",
         "javascript-delay": 6000,
     }
     if proxy is not None:
