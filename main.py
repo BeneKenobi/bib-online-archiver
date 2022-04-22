@@ -1,4 +1,5 @@
 import argparse
+from os.path import exists as file_exists
 from urllib.parse import urlparse
 
 import bibtexparser
@@ -19,6 +20,13 @@ def main():
         const=True,
         help='use all entrytypes, not only "Online"',
     )
+    argparser.add_argument(
+        "--overwrite",
+        nargs="?",
+        default=False,
+        const=True,
+        help="overwrite files in target folder",
+    )
     args = argparser.parse_args()
     with open(args.file) as bibtex_file:
         parser = bibtexparser.bparser.BibTexParser(
@@ -31,7 +39,13 @@ def main():
                 (entry["ENTRYTYPE"].lower() == "online") or (args.alltypes is True)
             ) and ("url" in entry):
                 url = urlparse(entry["url"])._replace(fragment="").geturl()
-                retrieve(url, f"{args.outputfolder}{entry['ID']}.pdf")
+                target_file = f"{args.outputfolder}{entry['ID']}.pdf"
+                if (not file_exists(target_file)) or (args.overwrite is True):
+                    retrieve(url, target_file)
+                else:
+                    print(
+                        f"{target_file} already exists. Use `--overwrite` to overwrite if necessary."
+                    )
 
 
 def retrieve(url, filename):
