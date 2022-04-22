@@ -1,8 +1,9 @@
 import argparse
+from urllib.parse import urlparse
+
 import bibtexparser
 import pdfkit
 import requests
-from urllib.parse import urlparse
 
 
 def main():
