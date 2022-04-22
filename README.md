@@ -1,5 +1,7 @@
 # bib-online-archiver
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
+
 Takes URLs of Online sources in a .bib-file and generates .pdf-files of them using [wkhtmltopdf](https://wkhtmltopdf.org). Filename of the .pdf-file will be the key of the bib-entry.
 
 ## Prerequisites
