@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+bibtexparser = "*"
+pdfkit = "*"
+requests = "*"
+
+[dev-packages]
+black = "*"
+bandit = "*"
+flake8 = "*"
+
+[requires]
+python_version = "3.9"

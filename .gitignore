@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Test .bib-files
+*.bib
+
+# Produced .pdf-files
+*.pdf
