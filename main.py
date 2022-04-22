@@ -1,5 +1,6 @@
 import argparse
 from os.path import exists as file_exists
+from os.path import join as path_join
 from urllib.parse import urlparse
 
 import bibtexparser
@@ -39,7 +40,7 @@ def main():
                 (entry["ENTRYTYPE"].lower() == "online") or (args.alltypes is True)
             ) and ("url" in entry):
                 url = urlparse(entry["url"])._replace(fragment="").geturl()
-                target_file = f"{args.outputfolder}{entry['ID']}.pdf"
+                target_file = path_join(args.outputfolder, f"{entry['ID']}.pdf")
                 if (not file_exists(target_file)) or (args.overwrite is True):
                     retrieve(url, target_file)
                 else:
