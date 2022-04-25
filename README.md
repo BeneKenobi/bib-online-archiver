@@ -11,7 +11,7 @@ Takes URLs of Online sources in a .bib-file and generates .pdf-files of them usi
 ## Usage
 
 ```shell
-pipenv run main.py my_sources.bib
+pipenv run python main.py my_sources.bib
 ```
 
 Default output path is the current directory, may be changed with `--outputdir /my/directory`.
