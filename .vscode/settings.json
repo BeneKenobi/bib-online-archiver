@@ -1,13 +1,3 @@
 {
-    "python.formatting.provider": "black",
-    "python.linting.enabled": true,
-    "python.linting.banditEnabled": true,
-    "python.linting.banditArgs": [],
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8CategorySeverity.E": "Error",
-    "python.linting.flake8CategorySeverity.F": "Error",
-    "python.linting.flake8CategorySeverity.W": "Warning",
-    "python.linting.flake8Args": [
-        "--ignore=E501"
-    ]
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

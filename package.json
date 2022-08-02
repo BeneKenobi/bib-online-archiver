@@ -1,0 +1,24 @@
+{
+  "name": "bib-online-archiver",
+  "version": "1.0.0",
+  "description": "[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeneKenobi/bib-online-archiver.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BeneKenobi/bib-online-archiver/issues"
+  },
+  "homepage": "https://github.com/BeneKenobi/bib-online-archiver#readme",
+  "dependencies": {
+    "bibtex-parse": "^2.1.0",
+    "puppeteer": "^15.5.0",
+    "typescript": "^4.7.4"
+  }
+}
