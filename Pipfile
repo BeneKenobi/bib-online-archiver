@@ -4,15 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-bibtexparser = "*"
 pdfkit = "*"
 requests = "*"
+bibtexparser = "<2"
 
 [dev-packages]
 black = "*"
 bandit = "*"
 flake8 = "*"
 mypy = "*"
+gitpython = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.12"
