@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0b41749b4d1fbc26fb8e7dff4d88af67d4cc4faefc296d2537bbb6e919f9d280"
+            "sha256": "ef15b91e0d0eafeae889bf042c8b80c1d91d46977fe2f401c978ee3822517080"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -18,10 +18,12 @@
     "default": {
         "bibtexparser": {
             "hashes": [
-                "sha256:093b6c824f7a71d3a748867c4057b71f77c55b8dbc07efc993b781771520d8fb"
+                "sha256:3b4b1de50ce45ee9091ccca72e1efc8732ab3ef615b70bcecc537c17cd84753e",
+                "sha256:9f48851eef4693cb7ef6897f7628966c5d0ef49b6403b13a862679a4c313d176"
             ],
             "index": "pypi",
-            "version": "==1.4.4"
+            "markers": "python_version >= '3.10'",
+            "version": "==2.1.0"
         },
         "certifi": {
             "hashes": [
@@ -225,6 +227,13 @@
             ],
             "index": "pypi",
             "version": "==1.0.0"
+        },
+        "pylatexenc": {
+            "hashes": [
+                "sha256:305a072a99ce736246049c9da05841b9d718c0f7ea8888f5f596cf15cb621053",
+                "sha256:e78e7391d6c104f1ed150e21cfaa58016cdb50aa54406a2eecb793649ffdfdd0"
+            ],
+            "version": "==2.11"
         },
         "pyparsing": {
             "hashes": [
